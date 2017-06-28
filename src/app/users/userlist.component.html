@@ -1,0 +1,43 @@
+<div class="col col-lg-12">
+	<md-input-container>
+	  <input mdInput placeholder="Favorite food">
+	</md-input-container>
+	<button md-button (click)="openDialog()" layout-align="end">Open dialog</button> 
+</div>
+
+{{color}}
+
+<md-toolbar color="primary">
+    <span>Userlist Here</span>
+</md-toolbar>
+
+ <div flex-xs flex-gt-xs="20" layout="column">
+	 <md-card>
+		<md-card-content>
+			<table class="table">
+				<thead>
+					<tr>
+						<td>First Name</td>
+						<td>Last Name</td>
+						<td>Designation</td>
+						<td>Edit</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let user of userlist">
+						<td>{{user.firstname}}</td>
+						<td>{{user.lastname}}</td>
+						<td>{{user.address}}</td>
+						<td><button md-button (click)="openDialog(user)" layout-align="end">View</button></td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</md-card-content>
+	</md-card>
+</div>
+<!-- <dialog-overview-example-dialog [user]='userlist'></dialog-overview-example-dialog> -->
+
+ 
+
+

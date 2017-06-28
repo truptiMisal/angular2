@@ -1,0 +1,27 @@
+<p>
+  Popup works!
+</p>
+
+<table class="table">
+	<thead>
+		<tr>
+		    <td>Id</td>
+			<td>First Name</td>
+			<td>Last Name</td>
+			<td>Designation</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let user of userlist">
+		    <td>{{user.id}}</td>
+			<td>{{user.firstname}}</td>
+			<td>{{user.lastname}}</td>
+			<td>{{user.address}}</td>
+		</tr>
+	</tbody>
+</table>
+
+ <!-- <dialog-overview-example-dialog [userlist]=userlist></dialog-overview-example-dialog>  -->
+
+ <button md-dialog-close md-button>OK</button>
+ <button md-dialog-close md-button>Cancel</button>
